@@ -1,0 +1,29 @@
+<!-- <h2 [myChangeColor]="colors">Директивы</h2>
+
+<span *myIf="isShow">{{ isShow }}</span>
+
+<br />
+
+<button (clic)="isShow = !isShow">Click me!</button> 
+
+@for (const color of colors) 
+{
+        <div>
+            <span>{{ color }}</span>
+        </div>    
+} -->
+
+<!-- <div *ngIf="isShow; else">
+    <span>{{ isShow }} я вывелся так как значение true </span>
+</div>
+
+<button click=" isShow = !isShow">click</button> -->
+
+@if(isShow) {
+    <span> {{isShow}} </span>
+}
+@else {
+    <span> {{isShow}} </span>
+}
+
+<button (click) = "isShow = !isShow"> Clic </button>
