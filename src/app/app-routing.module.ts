@@ -3,6 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { MyEmptyPage } from './components/empty-route/empty-route.component';
 import { MyCalculatorComponent } from './calculator/components/my-calculator.component';
+// import { DirectivesModule } from './directives/directives.module';
+// import { RequestModule } from './requests/request-module.module';
+
+
 
 const routes: Routes = [
   {
@@ -16,18 +20,18 @@ const routes: Routes = [
     path: 'object-list',
     loadChildren: () => import('./object-list/object-list.module').then((m) => m.MyObjectListModule)
   },
-  // {
-  //   path: 'directives',
-  //   loadChildren: () => import('./directives/directives.module').then((m) => m.DirectivesModule)
-  // },
+  {
+    path: 'directives',
+    loadChildren: () => import('./directives/directives.module').then((m) => m.DirectivesModule)
+  },
   // {
   //   path: 'life-cycle',
   //   loadChildren: () => import('./lifecycle/life-cycle.module').then((m) => m.LifeCycleModule)
   // },
-  // {
-  //   path: 'requests',
-  //   loadChildren: () => import('./requests/request-module.module').then((m) => m.RequestModule)
-  // },
+  {
+    path: 'requests',
+    loadChildren: () => import('./requests/request-module.module').then((m) => m.RequestModule)
+  },
   // {
   //   path: 'pipes',
   //   loadChildren: () => import('./pipes/pipes.module').then((m) => m.PipeModule)
